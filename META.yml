@@ -1,0 +1,17 @@
+--- #YAML:1.0
+name:                POE-Component-Server-HTTP-KeepAlive
+version:             0.0100
+abstract:            HTTP keep-alive support
+license:             ~
+generated_by:        ExtUtils::MakeMaker version 6.36
+distribution_type:   module
+requires:     
+    HTTP::Request:                 0
+    HTTP::Response:                0
+    HTTP::Status:                  0
+    POE:                           0.9999
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
+author:
+    - Philip Gwyn
