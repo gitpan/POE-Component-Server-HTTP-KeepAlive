@@ -1,6 +1,5 @@
 package t::Client;
 
-use YAML;
 use Data::Dumper;
 
 use HTTP::Status;

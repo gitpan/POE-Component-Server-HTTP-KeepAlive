@@ -36,7 +36,6 @@ unless( $ok ) {
 }
 
 
-use YAML;
 use Data::Dumper;
 
 my $PORT = 2080;
