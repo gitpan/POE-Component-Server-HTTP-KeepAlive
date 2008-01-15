@@ -14,14 +14,12 @@ BEGIN {
         require POE::Component::Server::SimpleHTTP;
         require POE::Component::Server::HTTP::KeepAlive::SimpleHTTP;
         require t::Client;
-        $ok = 1;
+        $ok = 1 if $POE::Component::Server::SimpleHTTP::VERSION > 1.30;
     };
 }
 
 BEGIN {
-
-    *RC_OK = \&POE::Component::Server::HTTP::RC_OK;
-    *RC_WAIT = \&POE::Component::Server::HTTP::RC_WAIT;
+    *RC_OK = \&HTTP::Status::RC_OK;
 
     *ARG0 = \&POE::Session::ARG0;
     *ARG1 = \&POE::Session::ARG1;
