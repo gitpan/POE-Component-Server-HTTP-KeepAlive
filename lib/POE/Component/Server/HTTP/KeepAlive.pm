@@ -9,7 +9,7 @@ use vars qw(@ISA @EXPORT $VERSION);
 
 use POE;
 
-$VERSION = "0.0301";
+$VERSION = "0.0302";
 
 my $N++;
 
@@ -542,10 +542,15 @@ L<POE::Component::Server::SimpleHTTP>.
 
 =head1 TODO
 
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2008-2009 by Philip Gwyn
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.8 or,
+at your option, any later version of Perl 5 you may have available.
 =head1 AUTHOR
 
 Additional hacking by Philip Gwyn, poe-at-pied.nu
-
-Released under the same terms as POE.
 
 =cut
