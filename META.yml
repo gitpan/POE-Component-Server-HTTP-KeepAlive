@@ -1,8 +1,8 @@
 --- #YAML:1.0
 name:                POE-Component-Server-HTTP-KeepAlive
-version:             0.0300
+version:             0.0301
 abstract:            HTTP keep-alive support
-license:             ~
+license:             perl
 generated_by:        ExtUtils::MakeMaker version 6.36
 distribution_type:   module
 requires:     

@@ -37,17 +37,36 @@ if( $v and $v < 0.10 ) {
 #        POE::Component::Server::HTTP       => 0.10
     ) unless $ONE;
 
+package MY;
+
+use strict;
+use warnings;
+
+sub init_PM
+{
+    my( $self, @args ) = @_;
+
+    $self->SUPER::init_PM( @args );
+
+    foreach my $file ( keys %{ $self->{PM} || {} } ) {
+        next if $file =~ /^lib.+\.pm$/;
+        delete $self->{PM}{$file};
+    }
+}
+
+package main;
 
 WriteMakefile(
     NAME           => 'POE::Component::Server::HTTP::KeepAlive',
     AUTHOR         => 'Philip Gwyn',
     VERSION_FROM   => 'lib/POE/Component/Server/HTTP/KeepAlive.pm', # finds $VERSION
     ABSTRACT_FROM  => 'lib/POE/Component/Server/HTTP/KeepAlive.pm',
+    LICENSE        => 'perl',
     PREREQ_PM      => {
         POE => '0.9999',
-        HTTP::Status => 0,
-        HTTP::Response => 0,
-        HTTP::Request => 0,
+        'HTTP::Status' => 0,
+        'HTTP::Response' => 0,
+        'HTTP::Request' => 0,
         %MORE
     },
    );
