@@ -9,7 +9,7 @@ use vars qw(@ISA @EXPORT $VERSION);
 
 use POE;
 
-$VERSION = "0.0304";
+$VERSION = "0.0305";
 
 my $N++;
 

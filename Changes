@@ -1,3 +1,7 @@
+0.0305 Aug 26 2011
+    Bump POE version
+    Fix tests; Dump -> Dumper
+
 0.0304 Aug 26 2011
     Bump copyright year
 

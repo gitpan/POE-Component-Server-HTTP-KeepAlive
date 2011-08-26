@@ -75,7 +75,7 @@ sub tests
     my $want = [ ( $CID[0] ) x ($KA_MAX+1),
                  ( $CID[$KA_MAX+1] ) x ( @CID-($KA_MAX+1) ) ];
     ::is_deeply( \@CID, $want, " ... and same connection ID" )
-        or die Dump { CID=>\@CID, want=>$want };
+        or die Dumper { CID=>\@CID, want=>$want };
 
     $want = [ ( $C[0] ) x ($KA_MAX), 0,
                  ( $C[$KA_MAX+1] ) x ( @C-($KA_MAX+1) ) ];
@@ -151,7 +151,7 @@ sub tests
 sub is_index
 {
     my( $resp ) = @_;
-    ::ok($resp->is_success, "got index") or die "resp=", Dump $resp;
+    ::ok($resp->is_success, "got index") or die "resp=", Dumper $resp;
     my $content=$resp->content;
     ::ok($content =~ /this is top/, "got top index");
 }
@@ -159,7 +159,7 @@ sub is_index
 sub is_honk
 {
     my( $resp ) = @_;
-    ::ok($resp->is_success, "got honk") or die "resp=", Dump $resp;
+    ::ok($resp->is_success, "got honk") or die "resp=", Dumper $resp;
     my $content=$resp->content;
     ::ok($content =~ /this is honk/, "got honk");
 }
@@ -167,7 +167,7 @@ sub is_honk
 sub is_bonk2
 {
     my( $resp ) = @_;
-    ::ok($resp->is_success, "got bonk2") or die "resp=", Dump $resp;
+    ::ok($resp->is_success, "got bonk2") or die "resp=", Dumper $resp;
     my $content=$resp->content;
     ::ok($content =~ /This, my friend/, "got bonk2") or die "content=$content";
 }

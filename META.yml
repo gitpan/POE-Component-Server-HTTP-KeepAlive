@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               POE-Component-Server-HTTP-KeepAlive
-version:            0.0304
+version:            0.0305
 abstract:           HTTP keep-alive support
 author:
     - Philip Gwyn
@@ -14,7 +14,7 @@ requires:
     HTTP::Request:   0
     HTTP::Response:  0
     HTTP::Status:    0
-    POE:             0.9999
+    POE:             1.311
 no_index:
     directory:
         - t

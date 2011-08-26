@@ -63,7 +63,7 @@ WriteMakefile(
     ABSTRACT_FROM  => 'lib/POE/Component/Server/HTTP/KeepAlive.pm',
     LICENSE        => 'perl',
     PREREQ_PM      => {
-        POE => '0.9999',
+        POE => '1.311',
         'HTTP::Status' => 0,
         'HTTP::Response' => 0,
         'HTTP::Request' => 0,
