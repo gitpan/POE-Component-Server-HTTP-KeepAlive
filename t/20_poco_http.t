@@ -54,6 +54,7 @@ my $KA_MAX = 3;
 my $aliases;
 ####################################################################
 unless( $pid ) {                          # we are the child
+    $POE::Kernel::poe_kernel->has_forked if $POE::Kernel::poe_kernel->can( 'has_forked' );
     $aliases = POE::Component::Server::HTTP->new(
         Port => $PORT,
         Address=>'localhost',

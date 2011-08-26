@@ -203,7 +203,7 @@ sub bonk2_done
 ${$POE::Kernel::poe_kernel->[POE::Kernel::KR_RUN()]} |=
       POE::Kernel::KR_RUN_CALLED();
 
-use t::Client;
+# use t::Client;
 
 t::Client::tests( $PORT, $KA_MAX, $S );
 
