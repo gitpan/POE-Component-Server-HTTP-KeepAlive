@@ -12,4 +12,3 @@ t/10_object.t
 t/20_poco_http.t
 t/25_poco_simplehttp.t
 t/Client.pm
-META.yml                                 Module meta-data (added by MakeMaker)

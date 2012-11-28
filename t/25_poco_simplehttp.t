@@ -6,9 +6,13 @@
 use strict;
 use Test::More tests => 47;
 
+use FindBin;
+use lib "$FindBin::Bin/..";
+
 my $ok;
 BEGIN {
     eval {
+        $SIG{__DIE__} = 'DEFAULT';
         require HTTP::Status;
         require POE;
         require POE::Component::Server::SimpleHTTP;

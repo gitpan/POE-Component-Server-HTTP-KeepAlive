@@ -9,7 +9,7 @@ use vars qw(@ISA @EXPORT $VERSION);
 
 use POE;
 
-$VERSION = "0.0305";
+$VERSION = "0.0306";
 
 my $N++;
 
@@ -159,8 +159,9 @@ sub status_close
 sub connection
 {
     my( $self, $r, $keyword ) = @_;
-    my $conn = lc $r->header( 'Connection' );
+    my $conn = $r->header( 'Connection' );
     return 0 unless $conn;
+    $conn = lc $conn;
     return( ( 0 <= index ",$conn,", lc ",$keyword," ) ? 1 : 0 );
 }
 

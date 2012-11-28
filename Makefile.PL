@@ -58,7 +58,7 @@ package main;
 
 WriteMakefile(
     NAME           => 'POE::Component::Server::HTTP::KeepAlive',
-    AUTHOR         => 'Philip Gwyn',
+    AUTHOR         => 'Philip Gwyn <gwyn -at- cpan.org>',
     VERSION_FROM   => 'lib/POE/Component/Server/HTTP/KeepAlive.pm', # finds $VERSION
     ABSTRACT_FROM  => 'lib/POE/Component/Server/HTTP/KeepAlive.pm',
     LICENSE        => 'perl',
