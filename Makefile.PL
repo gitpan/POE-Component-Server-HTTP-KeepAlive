@@ -67,6 +67,7 @@ WriteMakefile(
         'HTTP::Status' => 0,
         'HTTP::Response' => 0,
         'HTTP::Request' => 0,
+        'LWP::UserAgent' => 6,
         %MORE
     },
    );
